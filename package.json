@@ -5,6 +5,13 @@
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "files": [
     "dist",
     "README.md",
@@ -15,7 +22,7 @@
   "scripts": {
     "build": "bun run build:clean && bun run build:types && bun run build:js",
     "build:clean": "rm -rf dist",
-    "build:js": "bun build ./src/index.ts --outdir ./dist --target node",
+    "build:js": "bun build ./src/index.ts --outdir ./dist --target node && bun build ./src/index.ts --target node --format esm --outfile ./dist/index.mjs",
     "build:types": "tsc --emitDeclarationOnly --declaration --outDir dist",
     "prepublishOnly": "bun run build",
     "test": "bun test",
