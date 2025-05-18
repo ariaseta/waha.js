@@ -65,6 +65,7 @@ async function getQRCode() {
 - Messaging
 - Group management
 - Profile management
+- Real-time event handling via WebSockets
 - And more...
 
 ## API Documentation
@@ -88,6 +89,7 @@ const client = new WahaClient({
 - `groups`: Group operations
 - `profile`: Profile management
 - `presence`: Presence operations
+- `websocket`: Real-time event handling via WebSockets
 
 For detailed API documentation, see the [API Reference](./API.md).
 

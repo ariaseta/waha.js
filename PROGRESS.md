@@ -70,3 +70,12 @@
   - [x] Generate TypeScript declarations
   - [x] Add npm publishing instructions
   - [x] Test build process
+
+- [x] WebSocket module (100%)
+  - [x] Create WebSocket client class
+  - [x] Implement connection handling
+  - [x] Add event listeners
+  - [x] Implement session and event filtering
+  - [x] Add reconnection logic
+  - [x] Add message parsing
+  - [x] Create usage examples

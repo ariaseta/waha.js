@@ -6,6 +6,7 @@ import { GroupsModule } from './modules/groups';
 import { PresenceModule } from './modules/presence';
 import { ProfileModule } from './modules/profile';
 import { SessionsModule } from './modules/sessions';
+import { WebSocketModule } from './modules/websocket';
 import { WahaClientConfig } from './types';
 
 /**
@@ -48,6 +49,11 @@ export class WahaClient extends WahaBaseClient {
   public readonly presence: PresenceModule;
 
   /**
+   * WebSocket module for real-time events
+   */
+  public readonly websocket: WebSocketModule;
+
+  /**
    * Create a new WAHA client
    * @param config Client configuration
    */
@@ -62,6 +68,7 @@ export class WahaClient extends WahaBaseClient {
     this.groups = new GroupsModule(this);
     this.profile = new ProfileModule(this);
     this.presence = new PresenceModule(this);
+    this.websocket = new WebSocketModule(this);
   }
 }
 
@@ -76,3 +83,4 @@ export { ChatsModule } from './modules/chats';
 export { GroupsModule } from './modules/groups';
 export { ProfileModule } from './modules/profile';
 export { PresenceModule } from './modules/presence';
+export { WebSocketModule } from './modules/websocket';

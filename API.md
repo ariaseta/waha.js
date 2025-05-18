@@ -311,3 +311,73 @@ await client.presence.setPresence('default', {
 ```typescript
 const presence = await client.presence.getPresence('default', '1234567890@c.us');
 ```
+
+## WebSocket Module
+
+### Connect to WebSocket
+
+```typescript
+await client.websocket.connect(
+  {
+    session: '*', // Optional: '*' for all sessions or specific session name
+    events: ['message', 'session.status'] // Optional: array of event names or '*' for all events
+  },
+  {
+    autoReconnect: true, // Optional, defaults to true
+    reconnectInterval: 5000, // Optional, defaults to 5000ms
+    maxReconnectAttempts: 10, // Optional, defaults to 10
+    pingInterval: 30000 // Optional, defaults to 30000ms
+  }
+);
+```
+
+### Listen for Events
+
+```typescript
+// Listen for all messages
+client.websocket.on('message', (data) => {
+  console.log('Received event:', data);
+});
+
+// Listen for specific events
+client.websocket.on('message', (data) => {
+  console.log(`Received message from ${data.payload.from}: ${data.payload.body}`);
+});
+
+client.websocket.on('session.status', (data) => {
+  console.log(`Session ${data.session} status changed to: ${data.payload.status}`);
+});
+
+// Handle connection events
+client.websocket.on('open', () => {
+  console.log('WebSocket connection opened');
+});
+
+client.websocket.on('close', (event) => {
+  console.log('WebSocket connection closed');
+});
+
+client.websocket.on('error', (error) => {
+  console.error('WebSocket error:', error);
+});
+
+client.websocket.on('reconnecting', (attempt) => {
+  console.log(`Attempting to reconnect (${attempt})...`);
+});
+
+client.websocket.on('reconnected', () => {
+  console.log('Successfully reconnected!');
+});
+```
+
+### Close WebSocket Connection
+
+```typescript
+client.websocket.close();
+```
+
+### Check Connection Status
+
+```typescript
+const isConnected = client.websocket.isOpen();
+```

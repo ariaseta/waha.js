@@ -297,3 +297,35 @@ export interface WAHAChatPresences {
     lastSeen?: number;
   }>;
 }
+
+// WebSocket types
+export interface WebSocketConfig {
+  autoReconnect?: boolean;
+  reconnectInterval?: number;
+  maxReconnectAttempts?: number;
+  pingInterval?: number;
+}
+
+export interface WebSocketOptions {
+  session?: string | '*';
+  events?: string[] | '*';
+}
+
+export interface WebSocketEventPayload {
+  id: string;
+  timestamp: number;
+  event: string;
+  session: string;
+  metadata?: Record<string, any>;
+  me?: {
+    id: string;
+    pushName: string;
+  };
+  payload: any;
+  environment: {
+    tier: string;
+    version: string;
+    engine?: string;
+  };
+  engine: string;
+}
