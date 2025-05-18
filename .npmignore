@@ -1,0 +1,95 @@
+# Source files
+src/
+
+# Development files
+examples/
+tests/
+test/
+__tests__/
+*.test.ts
+*.spec.ts
+jest.config.js
+tsconfig.json
+.eslintrc
+.eslintrc.js
+.eslintrc.json
+.prettierrc
+.prettierrc.js
+.prettierrc.json
+.editorconfig
+
+# Git files
+.git/
+.github/
+.gitignore
+.gitattributes
+
+# CI/CD
+.travis.yml
+.circleci/
+.gitlab-ci.yml
+.github/workflows/
+azure-pipelines.yml
+appveyor.yml
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+bun-debug.log*
+
+# Coverage directory
+coverage/
+.nyc_output/
+
+# Dependency directories
+node_modules/
+.pnp/
+.pnp.js
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Editor directories and files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Documentation files (except README.md and API.md)
+docs/
+documentation/
+wiki/
+*.md
+!README.md
+!API.md
+!LICENSE.md
+
+# Bun specific
+.bun/
+bun.lockb
+
+# Other
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+PROGRESS.md

@@ -1,0 +1,51 @@
+{
+  "name": "waha.js",
+  "version": "0.1.0",
+  "description": "TypeScript SDK for WAHA (WhatsApp HTTP API)",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "API.md"
+  ],
+  "scripts": {
+    "build": "bun run build:clean && bun run build:types && bun run build:js",
+    "build:clean": "rm -rf dist",
+    "build:js": "bun build ./src/index.ts --outdir ./dist --target node",
+    "build:types": "tsc --emitDeclarationOnly --declaration --outDir dist",
+    "prepublishOnly": "bun run build",
+    "test": "bun test",
+    "lint": "eslint src --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\""
+  },
+  "keywords": [
+    "whatsapp",
+    "api",
+    "sdk",
+    "waha",
+    "typescript"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/waha.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/waha.js/issues"
+  },
+  "homepage": "https://github.com/yourusername/waha.js#readme",
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "axios": "^1.6.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

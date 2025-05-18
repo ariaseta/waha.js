@@ -1,0 +1,78 @@
+# Dependency directories
+node_modules/
+.pnp/
+.pnp.js
+
+# Build outputs
+dist/
+build/
+lib/
+out/
+coverage/
+*.tgz
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+bun-debug.log*
+
+# Editor directories and files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+.project
+.classpath
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Bun specific
+.bun/
+bun.lockb
+
+# npm specific
+.npm/
+.npmrc
+npm-debug.log*
+.node_repl_history
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Local development files
+*.local
+local.*
+*.local.*
