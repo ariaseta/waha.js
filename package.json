@@ -32,12 +32,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/waha.js.git"
+    "url": "https://github.com/ariaseta/waha.js.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/waha.js/issues"
+    "url": "https://github.com/ariaseta/waha.js/issues"
   },
-  "homepage": "https://github.com/yourusername/waha.js#readme",
+  "homepage": "https://github.com/ariaseta/waha.js#readme",
   "devDependencies": {
     "@types/node": "^20.10.5",
     "typescript": "^5.3.3"
