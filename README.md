@@ -15,112 +15,6 @@ yarn add waha.js
 bun add waha.js
 ```
 
-## Development
-
-### Prerequisites
-
-- [Bun](https://bun.sh/) (>= 1.0.0)
-- Node.js (>= 14.0.0)
-
-### Setup
-
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/waha.js.git
-cd waha.js
-
-# Install dependencies
-bun install
-```
-
-### Building
-
-```bash
-# Build the package
-bun run build
-```
-
-### Testing
-
-```bash
-# Run tests
-bun test
-```
-
-## Publishing to npm
-
-To publish this package to npm, follow these steps:
-
-1. Make sure you have an npm account and are logged in:
-
-```bash
-npm login
-```
-
-2. Update the version in `package.json` following [Semantic Versioning](https://semver.org/):
-
-```bash
-# For a patch release (bug fixes)
-npm version patch
-
-# For a minor release (new features, backward compatible)
-npm version minor
-
-# For a major release (breaking changes)
-npm version major
-```
-
-3. Build the package:
-
-```bash
-bun run build
-```
-
-4. Publish to npm:
-
-```bash
-npm publish
-```
-
-For scoped packages (e.g., @yourusername/waha.js), use:
-
-```bash
-npm publish --access public
-```
-
-### Publishing a Beta Version
-
-To publish a beta version:
-
-```bash
-# Update version with beta tag
-npm version prerelease --preid=beta
-
-# Publish with beta tag
-npm publish --tag beta
-```
-
-Users can then install the beta version with:
-
-```bash
-npm install waha.js@beta
-```
-
-### Package Files
-
-The package includes the following configuration files:
-
-- `.gitignore`: Specifies files that should be ignored by Git
-- `.npmignore`: Specifies files that should be excluded when publishing to npm
-- `.npmrc`: Contains npm configuration settings for the package
-
-When publishing to npm, only the following files will be included:
-- `dist/`: The compiled JavaScript and TypeScript declaration files
-- `README.md`: The main documentation file
-- `LICENSE`: The license file
-- `API.md`: API reference documentation
-- `package.json`: Package metadata and dependencies
-
 ## Usage
 
 ```typescript
@@ -200,3 +94,7 @@ For detailed API documentation, see the [API Reference](./API.md).
 ## License
 
 MIT
+
+## Development and Publishing
+
+For information on developing and publishing this package, please see the [Development Guide](./DEVELOPMENT.md).
